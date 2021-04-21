@@ -30,6 +30,9 @@ export const CardItem = ({ cards }) => {
    const history = useHistory();
    const { paths } = config;
 
+   const handleDetail = (id) => {
+      history.push(`${paths.pathDetailProject}/:${id}`);
+   };
    return (
       <>
          {cards.map((i) => {
@@ -68,9 +71,7 @@ export const CardItem = ({ cards }) => {
                                  color='primary'
                                  variant='outlined'
                                  startIcon={<Detail />}
-                                 onClick={() => {
-                                    history.push(`${paths.pathDetailProject}/:1`);
-                                 }}
+                                 onClick={() => handleDetail(i._id)}
                               >
                                  Ver detalle
                               </Button>

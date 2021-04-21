@@ -29,7 +29,7 @@ export const ViewAllProject = () => {
                   startIcon={<Code fontSize='large' />}
                   className={classes.moreProject}
                   onClick={() => {
-                     history.push(config.paths.pathAllProject);
+                     history.push(`${config.paths.pathAllProject}/:1`);
                   }}
                >
                   Ver todos los proyectos
