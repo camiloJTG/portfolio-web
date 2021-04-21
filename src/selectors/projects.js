@@ -4,7 +4,7 @@ export const getSixProject = (data) => {
 };
 
 export const getLastProject = (data) => {
-   const { tools, title, subtitle } = data[0];
+   const { _id, tools, title, subtitle } = data[0];
    const firstTools = tools.filter((x) => x.priority === 1);
-   return { title, subtitle, firstTools };
+   return { title, subtitle, _id, firstTools };
 };
