@@ -24,7 +24,6 @@ The .env.example file contains the model of the environment variables used in th
 
 ```
 https://jtg-portfolio-web-site.herokuapp.com/
-
 ```
 
 ## Tools implements
