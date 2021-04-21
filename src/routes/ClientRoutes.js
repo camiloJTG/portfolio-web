@@ -17,9 +17,13 @@ export const ClientRoutes = () => {
          <div>
             <Switch>
                <Route exact path={paths.pathHome} component={Home} />
-               <Route exact path={paths.pathAllProject} component={ListProject} />
+               <Route exact path={`${paths.pathAllProject}/:page`} component={ListProject} />
                <Route exact path={paths.pathAllSocial} component={SocialMedia} />
-               <Route exact path={`${paths.pathProjectByName}/:name`} component={ListByName} />
+               <Route
+                  exact
+                  path={`${paths.pathProjectByName}/:name/:page`}
+                  component={ListByName}
+               />
                <Route
                   exact
                   path={`${paths.pathDetailProject}/:projectid`}
