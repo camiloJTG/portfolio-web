@@ -15,12 +15,12 @@ import { useHistory } from 'react-router-dom';
 export const useStyles = makeStyles((t) => ({
    mobileDrawer: {
       width: '100%', //1650,
-      top: 64,
+      top: 60,
       height: 'calc(100% - 64px)'
    },
    desktopDrawer: {
       width: 230,
-      top: 64,
+      top: 60,
       height: 'calc(100% - 64px)'
    },
    images: {

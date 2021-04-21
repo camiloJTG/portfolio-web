@@ -20,12 +20,12 @@ import config from '../../configs/configs';
 export const useStyles = makeStyles((t) => ({
    desktopDrawer: {
       width: '88%', //80%,
-      top: 64,
+      top: 60,
       height: 'calc(100% - 64px)'
    },
    mobileDrawer: {
       width: '100%', //1650,
-      top: 64,
+      top: 60,
       height: 'calc(100% - 64px)'
    },
    root: {
