@@ -13,7 +13,7 @@ const useStyle = makeStyles((t) => ({
    }
 }));
 
-export const BaseBanner = ({ title, subtitle, tools }) => {
+export const BaseBanner = ({ id, title, subtitle, tools }) => {
    const classes = useStyle();
    return (
       <>
@@ -24,7 +24,7 @@ export const BaseBanner = ({ title, subtitle, tools }) => {
                   <Title title={title} styles={classes.typografyData} />
                   <Description description={subtitle} />
                   <ToolsItem tools={tools} />
-                  <AccessDetail />
+                  <AccessDetail id={id} />
                </Container>
             </div>
          </main>

@@ -11,22 +11,20 @@ export const useStyles = makeStyles((t) => ({
    }
 }));
 
-export const AccessDetail = () => {
+export const AccessDetail = ({ id }) => {
    const classes = useStyles();
    const history = useHistory();
    const { paths } = config;
+
+   const handleDetail = (id) => {
+      history.push(`${paths.pathDetailProject}/:${id}`);
+   };
 
    return (
       <div className={classes.heroButtons}>
          <Grid container spacing={2} justify='center'>
             <Grid item>
-               <Button
-                  variant='contained'
-                  color='primary'
-                  onClick={() => {
-                     history.push(`${paths.pathDetailProject}/:1`);
-                  }}
-               >
+               <Button variant='contained' color='primary' onClick={() => handleDetail(id)}>
                   Ver detalle ...
                </Button>
             </Grid>

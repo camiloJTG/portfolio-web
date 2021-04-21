@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
+import Hidden from '@material-ui/core/Hidden';
 import Linkedin from '@material-ui/icons/LinkedIn';
 import GitHub from '@material-ui/icons/GitHub';
 import { makeStyles } from '@material-ui/core';
@@ -53,10 +54,19 @@ export const Presentation = ({ presentation, socials }) => {
          <Grid container>
             <Grid item md={6}>
                <div className={classes.mainFeaturedPostContent}>
-                  <Typography component='h1' variant='h3' color='inherit' gutterBottom>
-                     {presentation.jobTitle}
+                  <Hidden only={['md', 'lg', 'xl']}>
+                     <Typography component='h1' variant='h4' color='inherit' gutterBottom>
+                        {presentation.jobTitle}
+                     </Typography>
+                  </Hidden>
+                  <Hidden only={['xs', 'sm']}>
+                     <Typography component='h1' variant='h3' color='inherit' gutterBottom>
+                        {presentation.jobTitle}
+                     </Typography>
+                  </Hidden>
+                  <Typography variant='subtitle1' display='block'>
+                     {presentation.aboutMe}
                   </Typography>
-                  <Typography variant='subtitle1'>{presentation.aboutMe}</Typography>
                   <Link
                      href={socials.linkedin}
                      target='_blank'
