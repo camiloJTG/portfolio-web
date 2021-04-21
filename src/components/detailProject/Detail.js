@@ -14,7 +14,8 @@ import Code from '@material-ui/icons/Code';
 
 const useStyles = makeStyles((t) => ({
    cardRoot: {
-      marginTop: 40
+      marginTop: 40,
+      marginBottom: 40
    },
    cardImage: {
       height: 0,
