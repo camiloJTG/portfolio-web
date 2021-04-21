@@ -15,6 +15,6 @@ export const headerClient = [
       id: 2,
       name: 'Proyectos',
       icons: Code,
-      redirect: paths.pathAllProject
+      redirect: `${paths.pathAllProject}/:1`
    }
 ];
